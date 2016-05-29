@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>年資計算</title>
+    <link rel="stylesheet" href="">
+    <script src="js/compute.js"></script>
+    
+</head>
+
+<body>
+    <div>
+        <!-- 起始日期 -->
+        <span>起始日期</span>
+        <input id="initial0" type="text" placeholder="e.g. 19920907">
+        <br>
+        <!-- 終止日期 -->
+        <span>終止日期</span>
+        <input id="final0" type="text" placeholder="e.g. 20161201">
+        <br>
+        <!-- 計算年資 -->
+        <button id='compute' onclick="compute(count)">計算結果</button>
+        <button id='add' onclick="add_new()">增加區間</button>
+        <br>
+        <span>總結果:</span>
+        <div id="year">實滿年: </div>
+        <div id="month">實滿月: </div>
+        <div id="day">實滿日: </div>
+    </div>
+    <div id='minus'></div>
+</body>
+</html>
