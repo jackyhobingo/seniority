@@ -4,30 +4,53 @@
 <head>
     <meta charset="utf-8">
     <title>年資計算</title>
-    <link rel="stylesheet" href="">
     <script src="js/compute.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     
 </head>
 
 <body>
-    <div>
-        <!-- 起始日期 -->
-        <span>起始日期</span>
-        <input id="initial0" type="text" placeholder="e.g. 19920907">
-        <br>
-        <!-- 終止日期 -->
-        <span>終止日期</span>
-        <input id="final0" type="text" placeholder="e.g. 20161201">
-        <br>
-        <!-- 計算年資 -->
-        <button id='compute' onclick="compute(count)">計算結果</button>
-        <button id='add' onclick="add_new()">增加區間</button>
-        <br>
-        <span>總結果:</span>
-        <div id="year">實滿年: </div>
-        <div id="month">實滿月: </div>
-        <div id="day">實滿日: </div>
-    </div>
-    <div id='minus'></div>
+    <table>
+        <tr>
+            總結果
+        </tr>
+        <tr>
+            <td></td>
+            <td class='col'>年</td>
+            <td class='col'>月</td>
+            <td class='col'>日</td>
+        </tr>
+        <tr>
+            <td>總計</td>
+            <td class="ans" id="year_t">0</td>
+            <td class="ans" id="month_t">0</td>
+            <td class="ans" id="day_t">0</td>
+        </tr>
+    </table>
+    <button id='compute' onclick="compute(count)">計算結果</button>
+    <button id='add' onclick="add_new()">增加區間</button>
+    <table>
+    <tr>
+
+    <td class="subtitle">起始日期</td>
+    <td><input id="initial0
+" type="text" placeholder="19920907"></td>
+            <!-- <td></td> -->
+            <td class='col'>年</td>
+            <td class='col'>月</td>
+            <td class='col'>日</td>
+    </tr>
+        <tr>
+    <td class="subtitle">終止日期</td>
+    <td><input id="final0" type="text" placeholder="20161201"></td>
+            <!-- <td>畸零</td> -->
+            <td class="ans" id="year_0">0</td>
+            <td class="ans" id="month_0">0</td>
+            <td class="ans" id="day_0">0</td>
+        </tr>       
+    </table>
+
+
+    <div id='adds'></div>
 </body>
 </html>
